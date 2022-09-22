@@ -18,6 +18,8 @@ spec:
         - name: shoppingclient
           image: eklein217/shoppingclient:latest
           imagePullPolicy: IfNotPresent
+          imagePullSecrets:
+            - name: acr-secret
           ports:
             - containerPort: 80
           env:

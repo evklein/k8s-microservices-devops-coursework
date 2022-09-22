@@ -16,8 +16,10 @@ spec:
     spec:
       containers:
       - name: shoppingapi
-        image: eklein217/shoppingapi:latest
+        image: shoppingacr.azurecr.io/shoppingapi:v1
         imagePullPolicy: IfNotPresent
+        imagePullSecrets:
+          - name: acr-secret
         resources:
           requests:
             memory: "64Mi"
